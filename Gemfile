@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'rspec', '~> 3.10'
+gem 'rspec', '~> 3.13'
 
-gem 'rubocop', '~> 1.12.1'
+gem 'rubocop', '~> 1.89'
 
-gem 'rubocop-rspec', '~> 2.2.0'
+gem 'rubocop-rspec', '~> 3.10'

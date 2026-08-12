@@ -30,8 +30,8 @@ RSpec.describe Pairs do
   end
 
   it 'check_pair' do
-    expect(-> { Pairs.car(345) }).to raise_error(NoMethodError)
-    expect(-> { Pairs.cdr('asdf') }).to raise_error(NoMethodError)
-    expect(-> { Pairs.car({ key: 'value' }) }).to raise_error(NoMethodError)
+    expect { Pairs.car(345) }.to raise_error(NoMethodError)
+    expect { Pairs.cdr('asdf') }.to raise_error(NoMethodError)
+    expect { Pairs.car({ key: 'value' }) }.to raise_error(NoMethodError)
   end
 end
