@@ -1,25 +1,20 @@
+# Дефолт rubocop: правила руками не выбираются и руками не правятся.
 plugins:
   - rubocop-rspec
 
 AllCops:
-  Exclude:
-    - "vendor/**/*"
-    - hexlet-pairs.gemspec
   NewCops: enable
+  Exclude:
+    - "**/vendor/**/*"
+    - "**/node_modules/**/*"
+    - "**/tmp/**/*"
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-Style/Documentation:
-  Enabled: false
-Metrics/BlockLength:
-  Enabled: false
+# Отступления от дефолта. Каждое с причиной: без причины правило не отключается.
 
-# Спека читается как документация к библиотеке, поэтому имя класса и предикат
-# пишутся явно: described_class и be_pair прячут ровно тот API, который она
-# показывает.
-RSpec/DescribedClass:
-  Enabled: false
-RSpec/PredicateMatcher:
-  Enabled: false
+# Учебные примеры показывают механику целиком, а дефолт требует одну проверку
+# на пример и не длиннее пяти строк. Дробление спрятало бы то, что показывают.
 RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
   Enabled: false

@@ -1,25 +1,28 @@
+# frozen_string_literal: true
+
 require_relative 'lib/pairs/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "hexlet-pairs"
+  spec.name          = 'hexlet-pairs'
   spec.version       = Pairs::VERSION
-  spec.authors       = ["Hexlet"]
-  spec.email         = ["info@hexlet.io"]
+  spec.authors       = ['Hexlet']
+  spec.email         = ['info@hexlet.io']
 
-  spec.summary       = "Hexlet Ruby Pairs"
+  spec.summary       = 'Hexlet Ruby Pairs'
   spec.description   = "A SICP'ish Functional Pairs implemented in Ruby."
-  spec.homepage      = "https://github.com/hexlet-components/ruby-pairs"
-  spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 4.0")
+  spec.homepage      = 'https://github.com/hexlet-components/ruby-pairs'
+  spec.license       = 'MIT'
+  spec.required_ruby_version = Gem::Requirement.new('>= 4.0')
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/hexlet-components/ruby-pairs"
-  spec.metadata["changelog_uri"] = "https://github.com/hexlet-components/ruby-pairs"
+  spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['source_code_uri'] = 'https://github.com/hexlet-components/ruby-pairs'
+  spec.metadata['changelog_uri'] = 'https://github.com/hexlet-components/ruby-pairs'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   # spec.bindir        = "exe"
   # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 end

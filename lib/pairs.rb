@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# Пара из двух значений, собранная на замыкании: конструктор cons и
+# селекторы car и cdr.
 module Pairs
   def self.cons(left, right)
     lambda { |message|
